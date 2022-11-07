@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+
+.movie-container {
+  margin: 20px 0;
+}
+
+h1
+{
+  font-size: 14px;
+  color: rgb(255, 255, 255); 
+  margin-left: 5px;
+  margin-top: 5px;
+}
+h1:hover
+{
+  font-size: 16px;
+  text-decoration: underline;
+  text-decoration-color: #444451;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 26px;
+  width: 32px;
+  margin: 3px;
+  font-size: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.sold {
+  background-color: #fff;
+}
+
+.seat:nth-of-type(9) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(9) {
+  margin-left: 18px;
+}
+
+.txt {
+  color: rgb(255, 255, 255);
+}
+
+.seat:not(.sold):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+.showcase .seat:not(.sold):hover {
+  cursor: default;
+  text-decoration: none;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+}
+
+.screen {
+  background-color: #fff;
+  height: 120px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-48deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text{
+  font-size: large;
+  color: rgb(255, 255, 255);
+    margin: 5px 0;
+}
+
+p.text span{
+    color: rgb(158, 248, 158);
+}
+
+.intro {
+  height: calc(100vh - 5.4375rem);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: system-ui;
+  height: 100vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../img/team.jpg");
+  background-position: center 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
+
+.intro div h1 {
+  overflow: hidden;
+  border-right: .1em solid rgba(252, 208, 124, 255);
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+  animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+}
